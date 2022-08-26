@@ -1,9 +1,18 @@
+:root{
+    --darkBlue: #395B64;
+    --white: #f2f2f2;
+    --blue: #A5C9CA;
+    --copiated: #E7F6F2;
+    --inputText: #0d0d0d;
+    --background: #2C3333;
+}
+
 *{
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #333;
+    color: var(--white);
 }
 
 html, body{
@@ -12,7 +21,8 @@ html, body{
 }
 
 html{
-    background: linear-gradient(180deg, #ea02ff 0%, #0097ff 100%);
+    background: var(--background);
+    /*background: linear-gradient(90deg, rgba(155,155,147,1) 0%, rgba(57,57,58,1) 100%);*/
 }
 
 input:focus{
@@ -36,7 +46,7 @@ input:focus{
 }
 
 #banner-layer{
-    background-color: rgba(25, 11, 122, 0.7);
+    background-color: rgba(230, 230, 230, 0.8);
     height: 100%;
     padding: 2rem;
     display: flex;
@@ -46,16 +56,17 @@ input:focus{
 #register-banner h1{
     font-size: 4rem;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: var(--darkBlue);
     word-spacing: 50rem; /*Mudando para apenas uma palavra por linha*/
 }
 
 #register-form{
-    background-color: #FDFDFD;
+    background-color: var(--darkBlue);
     padding: 2rem;
     width: 50%;
     display: flex;
     flex-direction: column;
+    color: var(--white);
 }
 
 #register-form h2{
@@ -67,7 +78,7 @@ input:focus{
 #register-form p{
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #AAA;
+    color: var(--white);
     font-size: .8rem;
 }
 
@@ -77,15 +88,17 @@ input:focus{
     flex-direction: column;
 }
 
-.form-ccontrol label{
+.form-control label{
     font-weight: bold;
-    margin-bottom: .6rem;
 }
 
 .form-control input{
     border: none;
     border-bottom: 1px solid #aaa;
-    padding: 0.6rem 0;
+    padding: 10px 10px;
+    color: var(--inputText);
+    margin-top: 5px;
+    border-radius: 5px;
 }
 
 #generate-password{
@@ -95,33 +108,34 @@ input:focus{
 }
 
 #generate-password:hover{
-    color: #0099ff;
+    color: var(--blue);
+    text-decoration: underline;
 }
 
 #register-form #generated-password{
-    border: 1px solid #0099ff;
     border-radius: 4px;
     font-weight: bold;
     font-size: 1.2rem;
     padding: 0.4rem;
-    color: #333;
+    color: var(--grenn);
+    background-color: var(--white);
     text-align: center;
     margin-bottom: 1rem;
     display: none;
 }
 
 #register-form #generated-password p{
-    color: #81d340;
+    color: var(--darkBlue);
     margin-bottom: 0.5rem;
 }
 
-button{
-    margin-top: 10px;
+#register-form #generated-password h4{
+    color: var(--darkBlue);
 }
 
-#register-form input[type="submit"], button{
-    background-color: #81d340;
-    color: #fff;
+#register-form input[type="submit"]{
+    background-color: var(--darkBlue);
+    color: var(--white);
     border: none;
     border-radius: 2rem;
     padding: 1rem 1.4rem;
@@ -130,10 +144,30 @@ button{
     align-self: flex-end;
 }
 
+button{
+    background-color: var(--white);
+    color: var(--darkBlue);
+    margin-top: 10px;
+    border: solid 2px var(--darkBlue);
+    border-radius: 2rem;
+    padding: 10px 10px;
+    width: 100px;
+    max-width: 150px;
+    cursor: pointer;
+}
+
+#register-form input[type="submit"]{
+    transition: .4s;
+    background-color: var(--white);
+    color: var(--darkBlue);
+    font-weight: bold;
+}
+
 .textCopiated{
-    background-color: #0097ff;
+    background-color: var(--darkBlue);
+    color: var(--white);
 }
 
 #register-form input[type="submit"]:hover{
-    background-color: #6cbb2a;
+    background-color: var(--blue);
 }

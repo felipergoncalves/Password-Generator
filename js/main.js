@@ -59,6 +59,6 @@ copyPassword.addEventListener("click", () => {
     navigator.clipboard.writeText(PasswordText.innerText).then(() => {
         /* clipboard successfully set */
         copyPassword.classList.add('textCopiated')
-        copyPassword.textContent = 'Copiado ✅'
+        copyPassword.textContent = 'Copiado'
       });
 })

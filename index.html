@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3c2e5aad98.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <title>Password Generator</title>
 </head>
@@ -31,6 +32,12 @@
             <div class="form-control">
                 <label for="password">Senha</label>
                 <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+                <button id="hidePassword" class="hidePassword">
+                    <i id="eye" class="fa-solid hide fa-eye-slash"></i>
+                </button>
+                <button id="showPassword" class="showPassword">
+                    <i id="eye" class="fa-solid show fa-eye"></i>
+                </button>
             </div>
             <p>Quer ajuda para criar uma senha segura?
                 <span id="generate-password">Clique aqui.</span>
@@ -43,6 +50,12 @@
             <div class="form-control">
                 <label for="confirmPassword">Confirme sua senha</label>
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha" required>
+                <button id="hidePasswordConfirm" class="hidePassword">
+                    <i id="eye" class="fa-solid hide fa-eye-slash"></i>
+                </button>
+                <button id="showPasswordConfirm" class="showPassword">
+                    <i id="eye" class="fa-solid show fa-eye"></i>
+                </button>
             </div>
             <input type="submit" value="Cadastrar">
         </div>

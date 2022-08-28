@@ -86,6 +86,7 @@ input:focus{
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .form-control label{
@@ -99,12 +100,19 @@ input:focus{
     color: var(--inputText);
     margin-top: 5px;
     border-radius: 5px;
+    width: 100%;
 }
 
 #generate-password{
     font-weight: bold;
     cursor: pointer;
     transition: .4s;
+}
+
+#eye{
+    cursor: pointer;
+    width: 20px;
+    color: var(--darkBlue);
 }
 
 #generate-password:hover{
@@ -144,7 +152,19 @@ input:focus{
     align-self: flex-end;
 }
 
-button{
+.showPassword, .hidePassword{
+    position:absolute;
+    top: 35px; right: 10px;
+    z-index:10;
+    border:none;
+    background:transparent;
+    outline:none;
+}
+
+.showPassword{
+    display: none;
+}
+#copyPassword{
     background-color: var(--white);
     color: var(--darkBlue);
     margin-top: 10px;
@@ -164,8 +184,8 @@ button{
 }
 
 .textCopiated{
-    background-color: var(--darkBlue);
-    color: var(--white);
+    background-color: var(--darkBlue)!important;
+    color: var(--white)!important;
 }
 
 #register-form input[type="submit"]:hover{

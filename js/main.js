@@ -2,6 +2,12 @@
 const generatePasswordButton = document.querySelector("#generate-password")
 const generatedPasswordElement = document.querySelector("#generated-password")
 const copyPassword = document.querySelector("#copyPassword")
+const showPassword = document.getElementById("showPassword")
+const hidePassword = document.getElementById("hidePassword")
+const showPasswordConfirm = document.getElementById("showPasswordConfirm")
+const hidePasswordConfirm = document.getElementById("hidePasswordConfirm")
+const passwordInput = document.getElementById("password")
+const confirmPasswordInput = document.getElementById("confirmPassword")
 
 //Funções
 const getLetterLowerCase = () => {
@@ -61,4 +67,35 @@ copyPassword.addEventListener("click", () => {
         copyPassword.classList.add('textCopiated')
         copyPassword.textContent = 'Copiado'
       });
+})
+confirmPasswordInput.addEventListener("keydown", () => {
+
+})
+
+hidePassword.addEventListener("click", () => {
+    showPassword.style.display = 'block'
+    hidePassword.style.display = 'none'
+    passwordInput.removeAttribute('type')
+    passwordInput.setAttribute('type', 'text')
+})
+
+showPassword.addEventListener("click", () => {
+    showPassword.style.display = 'none'
+    hidePassword.style.display = 'block'
+    passwordInput.removeAttribute('type')
+    passwordInput.setAttribute('type', 'password')
+})
+
+hidePasswordConfirm.addEventListener("click", () => {
+    showPasswordConfirm.style.display = 'block'
+    hidePasswordConfirm.style.display = 'none'
+    confirmPasswordInput.removeAttribute('type')
+    confirmPasswordInput.setAttribute('type', 'text')
+})
+
+showPasswordConfirm.addEventListener("click", () => {
+    showPasswordConfirm.style.display = 'none'
+    hidePasswordConfirm.style.display = 'block'
+    confirmPasswordInput.removeAttribute('type')
+    confirmPasswordInput.setAttribute('type', 'password')
 })
